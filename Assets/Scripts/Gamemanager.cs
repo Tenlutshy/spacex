@@ -1,19 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Gamemanager : MonoBehaviour
 {
 
-    private BoxCollider2D collider;
+    
     public GameObject toSpawn;
     public int spawnCooldown = 1;
     private bool canSpawn = true;
     public int spawnCount = 5;
+    private GameObject[] spawners;
 
     private void Start()
     {
-        collider = GetComponent<BoxCollider2D>();
+        spawners = GameObject.FindGameObjectsWithTag("Spawner");
     }
 
     private void Update()
@@ -34,16 +36,13 @@ public class Gamemanager : MonoBehaviour
             canSpawn = false;
             for (int i = 0; i < spawnCount; i++)
             {
+                GameObject spawner = (GameObject)spawners.GetValue(Random.Range(0, spawners.Count()));
+                BoxCollider2D collider = spawner.GetComponent<BoxCollider2D>();
                 Vector2 spawnPosition = new Vector2(Random.Range(collider.bounds.min.x, collider.bounds.max.x), Random.Range(collider.bounds.min.y, collider.bounds.max.y));
                 Instantiate(toSpawn, spawnPosition, Quaternion.identity);
             }
             yield return new WaitForSeconds(spawnCooldown);
             canSpawn = true;
         }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
     }
 }
