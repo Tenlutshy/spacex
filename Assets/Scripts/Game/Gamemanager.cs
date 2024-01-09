@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Gamemanager : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class Gamemanager : MonoBehaviour
         }else
         {
             GameStart = false;
+            SceneManager.LoadScene("End");
         }
     }
 
