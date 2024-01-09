@@ -8,6 +8,7 @@ public class Asteroid : MonoBehaviour
 
     private float targetX = 0;
     private float targetY = 0;
+    public int speed = 5;
     private Vector2 direction = new Vector2 (0, 0);
 
     void Start()
@@ -22,7 +23,7 @@ public class Asteroid : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(direction * Time.deltaTime * 1);
+        transform.Translate(direction * Time.deltaTime / 10 * speed);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

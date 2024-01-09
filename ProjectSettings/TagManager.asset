@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Spawner
   - Enemis
+  - GameManager
   layers:
   - Default
   - TransparentFX

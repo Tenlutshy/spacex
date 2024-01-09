@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8652348576380155843}
   m_Layer: 0
   m_Name: Gamemanager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,6 +122,7 @@ MonoBehaviour:
   toSpawn: {fileID: 6582596337362158374, guid: da4c5150f012ba64dad66ba59d044798, type: 3}
   spawnCooldown: 1
   spawnCount: 5
+  GameStart: 0
 --- !u!114 &8652348576380155843
 MonoBehaviour:
   m_ObjectHideFlags: 0

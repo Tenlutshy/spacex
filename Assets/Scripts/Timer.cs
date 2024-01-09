@@ -10,15 +10,22 @@ public class Timer : MonoBehaviour
     public TMP_Text timerText;
     public int seconds = 0;
     private float time = 0f;
+    private GameObject gamemanagerObject;
+    private Gamemanager gamemanager;
 
     void Start()
     {
+        gamemanagerObject = GameObject.FindGameObjectWithTag("GameManager");
+        gamemanager = gamemanagerObject.GetComponent<Gamemanager>();
     }
 
     void Update()
     {
-        time += Time.deltaTime;
-        seconds = Mathf.FloorToInt(time % 60);
-        timerText.SetText(seconds.ToString());
+        if (gamemanager.GameStart)
+        {
+            time += Time.deltaTime;
+            seconds = Mathf.FloorToInt(time % 60);
+            timerText.SetText(seconds.ToString());
+        }
     }
 }

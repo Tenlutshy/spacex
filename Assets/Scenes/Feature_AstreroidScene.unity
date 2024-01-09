@@ -805,13 +805,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1961221444178975387, guid: 9ec2327acde45524fad9c23c14a4a695, type: 3}
+      propertyPath: maxX
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961221444178975387, guid: 9ec2327acde45524fad9c23c14a4a695, type: 3}
+      propertyPath: maxY
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961221444178975387, guid: 9ec2327acde45524fad9c23c14a4a695, type: 3}
+      propertyPath: minX
+      value: -1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961221444178975387, guid: 9ec2327acde45524fad9c23c14a4a695, type: 3}
+      propertyPath: minY
+      value: -0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 6184744602081688316, guid: 9ec2327acde45524fad9c23c14a4a695, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.998
+      value: 1.715
       objectReference: {fileID: 0}
     - target: {fileID: 6184744602081688316, guid: 9ec2327acde45524fad9c23c14a4a695, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.241
+      value: -0.942
       objectReference: {fileID: 0}
     - target: {fileID: 6184744602081688316, guid: 9ec2327acde45524fad9c23c14a4a695, type: 3}
       propertyPath: m_LocalPosition.z
