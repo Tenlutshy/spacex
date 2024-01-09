@@ -25,4 +25,22 @@ public class Player : MonoBehaviour
             p.speed -= bonusSpeed;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemis"))
+        {
+            if (shield)
+            {
+                shield = false;
+                return;
+            }
+            health--;
+            if (health <= 0)
+            {
+                Debug.Log("You are dead");
+                Destroy(gameObject);
+            }
+        }
+    }
 }

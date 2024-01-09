@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6147300204070123162}
   - component: {fileID: 2653765348743487984}
   - component: {fileID: 7546063767834072943}
+  - component: {fileID: 8652348576380155843}
   m_Layer: 0
   m_Name: Gamemanager
   m_TagString: Untagged
@@ -120,3 +121,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toSpawn: {fileID: 6582596337362158374, guid: da4c5150f012ba64dad66ba59d044798, type: 3}
   spawnCooldown: 1
+  spawnCount: 5
+--- !u!114 &8652348576380155843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8439229395338307596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de46641ff5a136b40ba7ffb9ca030fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 0}
+  seconds: 0
