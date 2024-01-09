@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ShieldZone : MonoBehaviour
 {
-    Player player;
-
     private void DestroyObject()
     {
         Destroy(gameObject);
@@ -13,8 +11,8 @@ public class ShieldZone : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
-            player = collision.gameObject.GetComponent<Player>();
         {
+            Player player = collision.gameObject.GetComponent<Player>();
             if (player.shield)
             {
                 Invoke("DestroyObject", 0.1f);

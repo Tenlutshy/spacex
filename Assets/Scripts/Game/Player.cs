@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Hello");
         if (collision.gameObject.CompareTag("Enemis"))
         {
             if (shield)
