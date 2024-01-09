@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.U2D.Sprites;
 using UnityEngine;
 
 public class Asteroid : MonoBehaviour
@@ -16,6 +17,8 @@ public class Asteroid : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player");
         targetX = target.transform.position.x;
         targetY = target.transform.position.y;
+
+        speed = Random.Range(4, 7);
 
         direction = target.transform.position - transform.position;
 
